@@ -1,0 +1,258 @@
+/*
+Theme Name: Daniela Bustos
+Text Domain: Daniela Bustos
+Version: 1.0
+Description: Fancy theme
+Tags: responsive, fancy
+Author: Daniela Bustos
+Author URI: https://www.danielabustos.com
+*/
+
+
+:root {
+
+    /* Colors */
+    --white:#ffffff;
+    --gray: #6d6d6d;
+    --dark: #000000;
+
+    --primary: #e566d0;
+    --secondary:#f3ad6b;
+    --terciary: #8967f5;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    /* Fonts */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-normal: 1em;
+    --font-small: 0.8125rem;
+
+    /* Sidebar */
+    --sidebar-width: 280px;
+    --content-max-width: 860px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html {
+    line-height: 1.15;
+}
+body {
+    color: var(--gray);
+    overflow-x: hidden
+}
+a{
+    color: var(--terciary);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark);
+    font-weight: bold
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+/* HEADER */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background: var(--dark);
+}
+.header .site-title {
+    color:var(--white);
+    font-size:1.4em;
+    display:block;
+}
+
+.header .navbar {
+    padding: 2rem;
+}
+
+.header .nav-item {
+    font-weight: bold
+}
+
+.header .navbar-toggler {
+    padding: 1rem 
+}
+
+.header .nav-item a {
+    color: var(--white)
+}
+
+.header .nav-item a:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+/* FIN HEADER */
+
+/* LOGO Y SOCIAL */
+.logo{
+    width:100px;
+}
+.social-list a {
+    width: 32px;
+    height: 32px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--white)
+}
+.social-list a:hover {
+    color: var(--dark);
+}
+/* FIN LOGO Y SOCIAL */
+
+/* ANCHOS */
+.main-wrapper {
+    margin-left: var(--sidebar-width);
+}
+
+.main-wrapper .container {
+    max-width: var(--content-max-width);
+}
+
+/* FIN ANCHOS */
+
+.page-title {
+    position:sticky;
+    top:0;
+    z-index:9999;
+}
+
+.sticky{
+    padding:1em 0 !important;
+}
+
+.page-title .heading {
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.footer {
+    color: var(--white);
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--secondary);
+}
+
+/* COLORES DE FONDO */
+.fondo1 {
+    background-color: var(--primary);
+}
+
+.fondo2 {
+    background-color: var(--secondary);
+}
+
+.fondo3 {
+    background-color: var(--terciary);
+}
+
+.fondo-dark {
+    background-color: var(--dark);
+}
+/* FIN COLORES DE FONDO */
+
+/* POSTS */
+.post .title a{
+    font-size: 1.275rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.post .title a:hover {
+    color: var(--terciary)
+}
+
+.post .post-thumb {
+    max-width: 200px;
+    border-radius: 2px
+}
+
+.post .more-link {
+    font-size: var(--font-small);
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.meta {
+    color: var(--dark);
+    font-size: var(--font-small);
+    text-transform: uppercase;
+}
+
+.meta a {
+    color: var(--terciary);
+    font-size: var(--font-small);
+    text-transform: uppercase;
+}
+
+
+.centrado {
+    text-align: center !important;
+}
+
+.margenpag {
+    padding-top: 3rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  @media (max-width: 991.98px) {
+    .page-title {
+        position:static;
+    }
+
+    .header {
+        position: sticky;
+        width: inherit;
+        height: auto;
+        z-index: 100;
+    }
+
+    .header .site-title {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 1.2rem;
+        color:var(--white);
+        font-size:1.5em;
+        display:block;
+    }
+
+    .header .navbar {
+        padding: 1rem
+    }
+
+    .main-wrapper {
+        margin-left: 0
+    }
+}
